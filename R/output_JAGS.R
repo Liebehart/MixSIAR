@@ -244,7 +244,6 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
     my.title <- "Overall Population"
     print(ggplot2::ggplot(df, ggplot2::aes(x=x, fill=sources, colour=sources)) +
             ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
-            gplot2::scale_color_viridis(discrete=TRUE) +
             ggplot2::theme_classic() +
             ggplot2::xlab("Proportion of Diet") +
             ggplot2::ylab("Scaled Posterior Density") +
@@ -277,7 +276,6 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
 #        geom_density(alpha=.3) +
   ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
   ggplot2::xlim(0,1) +
-  ggplot2::scale_color_viridis(discrete=TRUE) +
   ggplot2::theme_classic() +
   ggplot2::xlab("Proportion of Diet") +
   ggplot2::ylab("Scaled Posterior Density") +
@@ -309,7 +307,6 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
           print(ggplot2::ggplot(df, ggplot2::aes(x=x, fill=sources, colour=sources)) +
 #             geom_density(alpha=.3) +
   ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
-  ggplot2::scale_color_viridis(discrete=TRUE) +
   ggplot2::theme_classic() +
   ggplot2::xlim(0,1) +
   ggplot2::xlab("Proportion of Diet") +
@@ -343,7 +340,6 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
         my.title <- paste(mix$FAC[[1]]$labels[f1],mix$FAC[[2]]$labels[f2],sep=" ") # formerly factor2_names
         print(ggplot2::ggplot(df, ggplot2::aes(x=x, fill=sources, colour=sources)) +
                 ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
-                ggplot2::scale_color_viridis(discrete=TRUE) +
                 ggplot2::theme_classic() +
                 ggplot2::xlim(0,1) +
                 ggplot2::xlab("Proportion of Diet") +
@@ -392,7 +388,6 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
     print(ggplot2::ggplot(df2, ggplot2::aes(x=x, fill=level, colour=level)) +
 #        geom_density(alpha=.3) +
   ggplot2::geom_density(alpha=.3) +
-  ggplot2::scale_color_viridis(discrete=TRUE) +
   ggplot2::theme_classic() +
   ggplot2::xlab(expression(sigma)) +
   ggplot2::ylab("Posterior Density") +
