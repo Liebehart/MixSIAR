@@ -73,7 +73,6 @@ n.effects <- mix$n.effects
 if(n.re==1){
   random_effects <- ifelse(mix$FAC[[1]]$re,mix$FAC[[1]]$name,mix$FAC[[2]]$name)
 }
-usethis::create_package("viridis")
 if(n.re==2){
   random_effects <- mix$factors
 }
