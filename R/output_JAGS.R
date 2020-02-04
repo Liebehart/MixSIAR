@@ -244,12 +244,13 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
     my.title <- "Overall Population"
     print(ggplot2::ggplot(df, ggplot2::aes(x=x, fill=sources, colour=sources)) +
             ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
-            ggplot2::theme_bw() +
+            gplot2::scale_color_viridis(discrete=TRUE) +
+            ggplot2::theme_classic() +
             ggplot2::xlab("Proportion of Diet") +
             ggplot2::ylab("Scaled Posterior Density") +
             ggplot2::xlim(0,1) +
             ggplot2::labs(title = my.title) +
-            ggplot2::theme(legend.position=c(1,1), legend.justification=c(1,1), legend.title=ggplot2::element_blank()))
+            ggplot2::theme(legend.position="right", legend.title=ggplot2::element_blank()))
 
     # Save the plot to file
     if(output_options[[4]]){ # svalue(plot_post_save_pdf)
@@ -276,11 +277,12 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
 #        geom_density(alpha=.3) +
   ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
   ggplot2::xlim(0,1) +
-  ggplot2::theme_bw() +
+  ggplot2::scale_color_viridis(discrete=TRUE) +
+  ggplot2::theme_classic() +
   ggplot2::xlab("Proportion of Diet") +
   ggplot2::ylab("Scaled Posterior Density") +
   ggplot2::labs(title = my.title) +
-  ggplot2::theme(legend.position=c(1,1), legend.justification=c(1,1), legend.title=ggplot2::element_blank()))
+  ggplot2::theme(legend.position="right", legend.title=ggplot2::element_blank()))
 
       # Save the plot to file
       if(output_options[[4]]){ # svalue(plot_post_save_pdf)
@@ -307,12 +309,13 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
           print(ggplot2::ggplot(df, ggplot2::aes(x=x, fill=sources, colour=sources)) +
 #             geom_density(alpha=.3) +
   ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
-  ggplot2::theme_bw() +
+  ggplot2::scale_color_viridis(discrete=TRUE) +
+  ggplot2::theme_classic() +
   ggplot2::xlim(0,1) +
   ggplot2::xlab("Proportion of Diet") +
   ggplot2::ylab("Scaled Posterior Density") +
   ggplot2::labs(title = my.title) +
-  ggplot2::theme(legend.position=c(1,1), legend.justification=c(1,1), legend.title=ggplot2::element_blank()))
+  ggplot2::theme(legend.position="right", legend.title=ggplot2::element_blank()))
 
           # Save the plot as a pdf file
           if(output_options[[4]]){ # svalue(plot_post_save_pdf)
@@ -340,12 +343,13 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
         my.title <- paste(mix$FAC[[1]]$labels[f1],mix$FAC[[2]]$labels[f2],sep=" ") # formerly factor2_names
         print(ggplot2::ggplot(df, ggplot2::aes(x=x, fill=sources, colour=sources)) +
                 ggplot2::geom_density(alpha=.3, ggplot2::aes(y=..scaled..)) +
-                ggplot2::theme_bw() +
+                ggplot2::scale_color_viridis(discrete=TRUE) +
+                ggplot2::theme_classic() +
                 ggplot2::xlim(0,1) +
                 ggplot2::xlab("Proportion of Diet") +
                 ggplot2::ylab("Scaled Posterior Density") +
                 ggplot2::labs(title = my.title) +
-                ggplot2::theme(legend.position=c(1,1), legend.justification=c(1,1), legend.title=ggplot2::element_blank()))
+                ggplot2::theme(legend.position="right", legend.title=ggplot2::element_blank()))
 
         # Save the plot as a pdf file
         if(output_options[[4]]){ # svalue(plot_post_save_pdf)
@@ -388,7 +392,8 @@ if(!output_options[[3]]){   # if 'suppress posterior plots' is NOT checked
     print(ggplot2::ggplot(df2, ggplot2::aes(x=x, fill=level, colour=level)) +
 #        geom_density(alpha=.3) +
   ggplot2::geom_density(alpha=.3) +
-  ggplot2::theme_bw() +
+  ggplot2::scale_color_viridis(discrete=TRUE) +
+  ggplot2::theme_classic() +
   ggplot2::xlab(expression(sigma)) +
   ggplot2::ylab("Posterior Density") +
   ggplot2::theme(legend.position=c(1,1), legend.justification=c(1,1), legend.title=ggplot2::element_blank()))   # + xlim(0,2)
